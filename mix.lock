@@ -1,5 +1,5 @@
 %{
-  "chain_util": {:git, "git@github.com:StelaPlatform/chain_util.git", "6fec51a16db87f0829107065dde9a5a09bb16dab", [tag: "v0.1.0"]},
+  "chain_util": {:git, "https://github.com/StelaPlatform/chain_util.git", "6fec51a16db87f0829107065dde9a5a09bb16dab", [tag: "v0.1.0"]},
   "con_cache": {:hex, :con_cache, "0.13.1", "047e097ab2a8c6876e12d0c29e29a86d487b592df97b98e3e2abedad574e215d", [:mix], [], "hexpm", "d3c19f04153b691d7bfdb15bcfc3b8fea503b0b51635115393809af7eabe2f37"},
   "decimal": {:hex, :decimal, "2.0.0", "a78296e617b0f5dd4c6caf57c714431347912ffb1d0842e998e9792b5642d697", [:mix], [], "hexpm", "34666e9c55dea81013e77d9d87370fe6cb6291d1ef32f46a1600230b1d44f577"},
   "ecto": {:hex, :ecto, "3.9.4", "3ee68e25dbe0c36f980f1ba5dd41ee0d3eb0873bccae8aeaf1a2647242bffa35", [:mix], [{:decimal, "~> 1.6 or ~> 2.0", [hex: :decimal, repo: "hexpm", optional: false]}, {:jason, "~> 1.0", [hex: :jason, repo: "hexpm", optional: true]}, {:telemetry, "~> 0.4 or ~> 1.0", [hex: :telemetry, repo: "hexpm", optional: false]}], "hexpm", "de5f988c142a3aa4ec18b85a4ec34a2390b65b24f02385c1144252ff6ff8ee75"},
