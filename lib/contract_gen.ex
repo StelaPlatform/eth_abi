@@ -46,8 +46,7 @@ defmodule EthAbi.ContractGen do
 
       def decode_output(hex, "(address)") do
         "0x000000000000000000000000" <> addr = hex
-        {:ok, addr} = FastEIP55.encode("0x" <> addr)
-        addr
+        "0x" <> addr
       end
 
       def decode_output(hex, "(bytes32)"), do: hex
