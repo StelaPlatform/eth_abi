@@ -204,7 +204,7 @@ defmodule EthAbi.ContractGen do
           |> Stream.map(fn k -> Keyword.get(binding(), k) end)
           |> Enum.map(&ChainUtil.hex_to_binary/1)
 
-        input = unquote(func_sig) |> ABI.encode(values) |> Base.encode16(case: :lower)
+        input = unquote(func_sig) |> ABI.encode(values) |> ChainUtil.binary_to_hex()
         c = Keyword.get(binding(), :contract)
         message = %{to: c, data: input}
 
@@ -225,7 +225,7 @@ defmodule EthAbi.ContractGen do
           |> Stream.map(fn k -> Keyword.get(binding(), k) end)
           |> Enum.map(&ChainUtil.hex_to_binary/1)
 
-        input = unquote(func_sig) |> ABI.encode(values) |> Base.encode16(case: :lower)
+        input = unquote(func_sig) |> ABI.encode(values) |> ChainUtil.binary_to_hex()
         c = Keyword.get(binding(), :contract)
         k = Keyword.get(binding(), :private_key)
         opts = [{:input, input} | opts]
@@ -244,7 +244,7 @@ defmodule EthAbi.ContractGen do
           |> Stream.map(fn k -> Keyword.get(binding(), k) end)
           |> Enum.map(&ChainUtil.hex_to_binary/1)
 
-        input = unquote(func_sig) |> ABI.encode(values) |> Base.encode16(case: :lower)
+        input = unquote(func_sig) |> ABI.encode(values) |> ChainUtil.binary_to_hex()
         c = Keyword.get(binding(), :contract)
         k = Keyword.get(binding(), :private_key)
         w = Keyword.get(binding(), :wei)
