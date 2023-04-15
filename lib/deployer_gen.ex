@@ -57,6 +57,12 @@ defmodule EthAbi.DeployerGen do
         wait_tx(hash, tx)
       end
 
+      defp wait_tx(hash, %{block_hash: nil}) do
+        Process.sleep(1000)
+        tx = OcapRpc.Eth.Transaction.get_by_hash(hash)
+        wait_tx(hash, tx)
+      end
+
       defp wait_tx(_, %{receipt_status: 0}), do: raise("Failed to deploy contract.")
       defp wait_tx(_hash, tx), do: tx
     end
